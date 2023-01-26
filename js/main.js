@@ -3,7 +3,8 @@ const API = "https://api.github.com/users/";
 const app = Vue.createApp({
     data(){
         return {
-            search: null
+            search: null,
+            title: "Buscador de Perfiles de Github"
         };
     },
     methods:{
