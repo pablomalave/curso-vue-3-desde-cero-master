@@ -1,5 +1,3 @@
-esversion: 8;
-
 const API = "https://api.github.com/users/";
 
 const app = Vue.createApp({
