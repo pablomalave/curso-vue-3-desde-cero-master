@@ -7,8 +7,8 @@ const app = Vue.createApp({
             title: "Buscador de Perfiles de Github",
             result: null,
             error: null
-        };
-    },
+        }; //end return
+    }, //end data
     methods:{
         async doSearch() {
           try {
@@ -18,10 +18,11 @@ const app = Vue.createApp({
             this.result = true;
           } catch (e) {
             this.error = true;
-          }
-            
-          }
-        }
-});
+          } finally {
+            this.search = null;
+            }
+          }//end doSearch
+          } //end methods
+});//end createApp
 
 const mountedApp = app.mount("#app");
