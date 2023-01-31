@@ -5,17 +5,20 @@ const app = Vue.createApp({
         return {
             search: null,
             title: "Buscador de Perfiles de Github",
-            result: null
+            result: null,
+            error: null
         };
     },
     methods:{
         async doSearch() {
+          this{
             const response = await fetch(API + this.search);
             const data = await response.json();
             console.log(data);
             this.result = true;
+            }
+          }
         }
-    }
 });
 
 const mountedApp = app.mount("#app");
