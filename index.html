@@ -29,10 +29,10 @@
 
             <!-- Result -->
             <div class="result" v-if="result">
-              <h2 class="result__name">Pablo Malave</h2>
+              <h2 class="result__name">{{ result.name }}</h2>
             </div>
             <!-- Error -->
-            <div v-if="error" class="result__error"></div>
+            <div v-if="error" class="result__error">{{ error.message }}</div>
         </article>
     </div>
 </body>
