@@ -32,7 +32,7 @@ const app = Vue.createApp({
         //inicia addFavorites
         addFavorites() {
           this.favorites.set(this.result.id, this.result);
-          console.log(this.favorites);
+          console.log(this.favorites.get(this.result.id));
           },//end addFavorites
         //inicia removeFavorites
         removeFavorites(){
