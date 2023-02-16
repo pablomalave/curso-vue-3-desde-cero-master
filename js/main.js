@@ -6,10 +6,12 @@ const app = Vue.createApp({
             search: null,
             title: "Buscador de Perfiles de Github",
             result: null,
-            error: null
+            error: null,
+            favorites: new Map()
         }; //end return
     }, //end data
     methods:{
+        //inicia doSeatch
         async doSearch() {
           this.result = this.error = null;
           try {
@@ -26,8 +28,22 @@ const app = Vue.createApp({
           } finally {
             this.search = null;
             }
-          }//end doSearch
-          } //end methods
+          },//end doSearch
+        //inicia addFavorites
+        addFavorites() {
+          this.favorites.set(this.result.id, this.result);
+          console.log(this.favorites);
+          },//end addFavorites
+        //inicia removeFavorites
+        removeFavorites(){
+          this.favorites.delete(this.result.id);
+          }//end removeFavorites
+      }, //end methods
+    computed:{
+      isFavorite(){
+        return this.favorites.has(this.result.id);
+      }//end isFavorite
+    }//end computed
 });//end createApp
 
 const mountedApp = app.mount("#app");
