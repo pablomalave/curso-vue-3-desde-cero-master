@@ -32,17 +32,24 @@ const app = Vue.createApp({
         //inicia addFavorites
         addFavorites() {
           this.favorites.set(this.result.id, this.result);
-          console.log(this.favorites.get(this.result.id));
+          this.updateStorage();
           },//end addFavorites
         //inicia removeFavorites
         removeFavorites(){
           this.favorites.delete(this.result.id);
-          }//end removeFavorites
+          this.updateStorage();
+          },//end removeFavorites
+        updateStorage(){
+          window.localStorage.setItem('favorites',JSON.stringify(this.allFavorites));
+        }// end updateStorage
       }, //end methods
     computed:{
       isFavorite(){
         return this.favorites.has(this.result.id);
-      }//end isFavorite
+      },//end isFavorite
+      allFavorites(){
+        return Array.from(this.favorites.values());
+      }//end allFavorites
     }//end computed
 });//end createApp
 

@@ -1,35 +1,92 @@
-# curso-vue-3-desde-cero
-Repo. del Curso de Vue 3 desde Cero en Escuela Vue ⭐️
----
+<!-- Please update value in the {}  -->
 
-Puedes acceder [desde aquí](https://www.escuelavue.es/cursos/curso-vue-3-desde-cero/).
+<h1 align="center">Buscador de Perfiles de GITHUB</h1>
 
-![Curso Vue 3](https://a.storyblok.com/f/87002/1280x720/18667defa9/curso-vue-3-desde-cero.jpg)
+<div align="center">
+     Ejercicio que forma parte del "Curso Vue 3 desde Cero" desarrollado por <a href="https://www.youtube.com/watch?v=ldMXgFlfmgk&list=PLM-Y_YQmMEqADwNySz6he0tkBr_awZ2tn" target="_blank">Juan Andrés Nuñez</a> en Youtube .
+</div>
 
-En el **Curso de Vue 3 aprenderás a utilizar Vue.js desde cero** y paso a paso, en un pequeño proyecto real.
+<div align="center">
+  <h3>
+    <a href="https://notifications-page-main-blond.vercel.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/pablomalave/notifications-page-main.git">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-> Aprender Vue desde cero es (además de una delicia) una de las mejores decisiones profesionales que has podido tomar. Enhorabuena 👏🏻
+<!-- TABLE OF CONTENTS -->
 
-¿Qué es Vue 3?, quizás te preguntes: **Vue.js es un framework JavaScript moderno, flexible, elegante, minimalista y fácil de aprender**. Si te dedicas al desarrollo Web frontend, ¿qué más se puede pedir?.
+## Table of Contents
 
-Durante el Curso de Vue 3 aprenderás qué es Vue, cómo funciona Vue y cuáles son sus novedades, por ejemplo:
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Features](#features)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-* Crear proyectos con Vue 3.
-* Usar JavaScript asíncrono con Vue.
-* Reactividad Vue.
-* Mejoras Vue 3.
-* Métodos y eventos Vue.
-* Renderizado condicional.
-* Atributos dinámicos.
-* Directivas.
-* Estilos y clases dinámicos.
-* Manejo de estado.
-* Persistencia.
-* Transiciones Vue.
-* Componentes Vue.
+<!-- OVERVIEW -->
 
-**Al finalizar el Curso de Vue 3 dominarás las bases del framework** y estarás listo/a para seguir tu [camino de aprendizaje](/como-aprender-vue/) y aplicar lo aprendido en tus propios proyectos Vue.
+## Overview
 
-Para aprovechar el Curso de Vue 3 es necesario que tengas unos mínimos [conocimientos de HTML, CSS y JavaScript](/como-aprender-vue/).
+![screenshot](./assets/imagesReadme/DesktopDesign.png)
 
-**Este es el mejor momento para aprender Vue 3**, así que te espero en la primera lección.
+
+This webpage shows a list of Notifications of an Application:
+
+- Distinguish between "unread" and "read" notifications
+- Select "Mark all as read" to toggle the visual state of the unread notifications and set the number of unread messages to zero
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+![screenshot](./assets/imagesReadme/MobileDesign.png)
+
+### What I learned
+
+The use of forEach() method to calls a function for each element in an array.
+
+```js
+const notificationsUnread = document.querySelectorAll(".notification--unread");
+    notificationsUnread.forEach(removeClass, "notification--unread");
+
+ function removeClass(item) {
+    item.classList.remove(this);
+}   
+```
+With the second argument in the forEach() method, a value passed to the function as its this value.
+
+### Built With
+
+<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+
+- HTML, CSS, CSS Grid, CSS Flex.
+- JavaScript.
+- Mobile First Design.
+- Responsive Design.
+
+## Features
+
+<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+
+This application/site was created as a submission to a [FrontEnd Mentor](https://www.frontendmentor.io/challenges) challenge. The [challenge](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC) was to build an application to complete the given user stories.
+
+## Acknowledgements
+
+<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
+
+- W3 Schools. [JavaScript Array.from() method](https://www.w3schools.com/jsref/jsref_from.asp)
+- W3 Schools. [JavaScript Maps](https://www.w3schools.com/js/js_object_maps.asp#)
+- W3 Schools. [Window localStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
+
+
+## Contact
+
+- Website [Pablo Malave - GithubPages](https://pablomalave.github.io/CV/)
+- GitHub [@pablomalave](https://github.com/pablomalave)
