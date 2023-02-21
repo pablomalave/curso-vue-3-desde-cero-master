@@ -10,6 +10,13 @@ const app = Vue.createApp({
             favorites: new Map()
         }; //end return
     }, //end data
+    created(){
+        const savedFavorites = JSON.parse(window.localStorage.getItem("favorites"));
+        if (savedFavorites.length) {
+          const favorites = new Map(savedFavorites.map(favorite => [favorite.id, favorite]));
+          this.favorites = favorites;
+        }
+    },//end created
     methods:{
         //inicia doSeatch
         async doSearch() {
