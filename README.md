@@ -81,6 +81,7 @@ This application/site was created as a submission to a [FrontEnd Mentor](https:/
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
+- MDN Web Docs. [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - W3 Schools. [JavaScript Array.from() method](https://www.w3schools.com/jsref/jsref_from.asp)
 - W3 Schools. [JavaScript Maps](https://www.w3schools.com/js/js_object_maps.asp#)
 - W3 Schools. [Window localStorage](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
